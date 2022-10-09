@@ -31,7 +31,7 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = "5863935ee9cca4c02ed68203f807c65b";
+    const apiKey = "ef338f15103ddb4f3d78cb7b6408d7e7";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -59,25 +59,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <footer>
-          This project was coded by Folashade Joachim and is{" "}
-          <a
-            href="https://github.com/Folashade633/React-Weather-App"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open-sourced on GitHub
-          </a>{" "}
-          and{" "}
-          <a
-            href="https://ornate-dragon-523f6d.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Hosted on Netlify
-          </a>
-        </footer>
-        </div>
+      </div>
     );
   } else {
     search();

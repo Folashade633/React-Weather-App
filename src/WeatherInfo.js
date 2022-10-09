@@ -14,8 +14,8 @@ export default function WeatherInfo(props) {
               <FormattedDate date={props.data.date} />, {props.data.description}
             </li>
             <li>
-              Humidity: <strong>{props.data.humidity}%</strong>, Wind:{" "}
-              <strong>{props.data.wind}km/h</strong>
+              Humidity: <strong>{Math.round(props.data.humidity)}%</strong>,
+              Wind: <strong>{Math.round(props.data.wind)}km/h</strong>
             </li>
           </ul>
         </div>
