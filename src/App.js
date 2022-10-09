@@ -6,23 +6,23 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultCity="New York" />
+        <Weather defaultCity="Nigeria" />
         <footer>
-          This project was coded by Folashade Joachim and is{" "}
+          Open-sourced on{" "}
           <a
             href="https://github.com/Folashade633/React-Weather-App"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Open-sourced on GitHub
+            GitHub
           </a>{" "}
-          and{" "}
+          and Hosted on{" "}
           <a
             href="https://charming-concha-a92161.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Hosted on Netlify
+            Netlify
           </a>
         </footer>
       </div>
