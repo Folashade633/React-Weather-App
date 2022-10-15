@@ -18,21 +18,22 @@ export default function WeatherForecast(props) {
 
   if (loaded) {
     return (
-      <div className="WeatherForecast row">
-        <div>
-          <strong>Next five days</strong>
+      <div className="WeatherForecast">
+        <div className="WeatherForecast-header">Next five days</div>
+        <hr />
+        <div className="row">
+          {forecast.map(function (day, index) {
+            if (index < 5) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastPreview data={day} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
         </div>
-        {forecast.map(function (day, index) {
-          if (index < 5) {
-            return (
-              <div className="col" key={index}>
-                <WeatherForecastPreview data={day} />
-              </div>
-            );
-          } else {
-            return null;
-          }
-        })}
       </div>
     );
   } else {
